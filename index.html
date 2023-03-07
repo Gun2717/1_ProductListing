@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #Menu_container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f8f8f8;
+            padding: 10px;
+        }
+        #left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30%;
+            font-size: 18px;
+        }
+        #left div {
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        #center {
+            width: 10%;
+        }
+        #right {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 30%;
+        }
+        #right img {
+            width: 25px;
+            height: 25px;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        .box {
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-right: 20px;
+            background-color: #fff;
+        }
+        .container-1 {
+            display: flex;
+            align-items: center;
+            padding: 5px;
+        }
+        .container-1 input[type="search"] {
+            border: none;
+            font-size: 16px;
+            width: 200px;
+            padding: 10px;
+            background-color: #fff;
+        }
+        .container-1 .icon {
+            background-color: #f8f8f8;
+            padding: 5px;
+            margin-right: 10px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="Menu_container">
+        <div id="left">
+            <div>Shop</div>
+            <div>Ofers</div>
+            <div>Our story</div>
+            <div>Blog</div>
+        </div>
+        <div id="center">
+            <img src="./image/logo.png" alt="">
+        </div>
+        <div id="right">
+            <div class="box">
+                <div class="container-1">
+                    <span class="icon"><i class="fa fa-search"></i></span>
+                    <input type="search" id="search" placeholder="Search..." />
+                </div>
+            </div>  
+            <div>
+                <img src="./image/right1.0.png" alt="">
+            </div>
+            <div>
+                <img src="./image/right1.1.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div id="banner">
+        <img src="./image/banner.png" att="">
+    </div>
+</body>
+</html>
