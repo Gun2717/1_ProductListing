@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Nhân sự</h3>
+    <form action="/save" method="post" enctype="multipart/form-data">
+      <label> Nhập mã nhân sự: </label>
+      <input
+        type="number"
+        name="manhansu"
+        id="manhansu"
+        placeholder=" Nhập mã nhân sự"
+      />
+      <br />
+      <br />
+      <label> Nhập họ tên: </label>
+      <input type="text" name="hoten" id="hoten" placeholder=" Nhập họ tên" />
+      <br />
+      <br />
+      <label> Nhập năm sinh: </label>
+      <input
+        type="number"
+        name="namsinh"
+        id="namsinh"
+        placeholder=" Nhập năm sinh"
+      />
+      <br />
+      <br />
+      <label> Nhập phòng ban : </label>
+      <select name="phongban" id="phongban" >
+        <option value="Phòng Ban A">Phòng Ban A</option>
+        <option value="Phòng Ban B">Phòng Ban B</option>
+        <option value="Phòng Ban C">Phòng Ban C</option>
+      </select>
+      <br />
+      <br />
+      <label> Nhập hình ảnh: </label>
+      <input type="file" name="image" id="image" accept="image*/" required />
+      <br />
+      <br />
+      <input type="submit" value="Thêm" />
+    </form>
+    <br />
+    <br />
+    <form action="/delete" method="post" enctype="multipart/form-data">
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Mã nhân sư</th>
+            <th>Họ tên</th>
+            <th>Năm sinh</th>
+            <th>Phòng Ban</th>
+            <th>Hình ảnh</th>
+            <th>Chọn</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% data.forEach(item => { %>
+              <tr>
+                <td>
+                  <%=item.maNhanSu %>
+                </td>
+                <td>
+                  <%=item.hoTen %>
+                </td>
+                <td>
+                  <%=item.namSinh %>
+                </td>
+                <td>
+                  <%=item.phongBan %>
+                </td>
+                <td>
+                  <img src="<%=item.hinhAnh %>" alt="" width="100" />
+                </td>
+                <td>
+                  <input type="checkbox" name="<%= item.maNhanSu%>" id="<%= item.maNhanSu %>" />
+                </td>
+
+              </tr>
+              <% })%>
+
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <input type="submit" value="Xoá" />
+    </form>
+  </body>
+</html>
